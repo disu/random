@@ -1,0 +1,220 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Random\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-18 11:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.0; wp-5.6.2\n"
+"X-Domain: random"
+
+#: admin/partials/random-admin-display.php:406
+msgid "18 languages supported."
+msgstr ""
+
+#: admin/partials/random-admin-display.php:38
+msgid "About"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:340
+#: admin/partials/random-admin-display.php:385
+msgid "Active"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:127
+msgid ""
+"Build a shortcode to get random contents and use it wherever you want on "
+"your WordPress website."
+msgstr ""
+
+#: admin/partials/random-admin-display.php:314
+msgid "CONTACT US"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:83
+msgid "Content"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:165
+msgid "Content type"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:266
+msgid ""
+"Copy this code and paste wherever you want to show your random contents."
+msgstr ""
+
+#: admin/partials/random-admin-display.php:273
+msgid "Copy to clipboard"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:363
+msgid "Disable active or unused/orphan shortcodes"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:307
+msgid "DONATE WITH PAYPAL"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:84
+msgid "Excerpt"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:197
+msgid "Exclude"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:361
+msgid ""
+"Find every shortcode (by tag or content type) present in your posts, pages "
+"and custom type contents"
+msgstr ""
+
+#: random.php:81
+msgid "Get random contents"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:210
+msgid "Get the shortcode"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.scribit.it/"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://www.scribit.it/en/wordpress-plugins/get-random-contents/"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:298
+msgid "If you like our plugin please feel free to give us 5 stars :)"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:312
+msgid "If you want some information about our Company"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:305
+msgid "If you want to help us to improve our service please Donate a coffe"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:186
+msgid "Include"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:187
+msgid ""
+"Include only some posts in results indicating their IDs separated by commas."
+msgstr ""
+
+#: admin/partials/random-admin-display.php:156
+msgid "Number of posts to show."
+msgstr ""
+
+#: admin/partials/random-admin-display.php:166
+msgid "Post contents to show."
+msgstr ""
+
+#: admin/partials/random-admin-display.php:179
+msgid "Post IDs"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:138
+msgid "Post types"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:139
+msgid "Post types to get random content from."
+msgstr ""
+
+#: admin/partials/random-admin-display.php:155
+msgid "Posts number"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:405
+msgid ""
+"Proofreading plugin allows you to improve the quality of your posts, pages "
+"and all your WordPress website.<br/>It gives you the possibility to check "
+"the correction of the texts inserted into posts, pages and drafts in less "
+"than a second!"
+msgstr ""
+
+#. Name of the plugin
+#: admin/partials/random-admin-display.php:30
+msgid "Random"
+msgstr ""
+
+#: random.php:95
+msgid "Random is powered by"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Random, a plugin designed to insert random contents, coming from pages, "
+"posts and other types, into your website."
+msgstr ""
+
+#: admin/partials/random-admin-display.php:198
+msgid ""
+"Remove some posts from results indicating their IDs separated by commas."
+msgstr ""
+
+#. Author of the plugin
+msgid "Scribit"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:362
+msgid "Search unused shortcodes"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:265
+msgid "Shortcode"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:269
+msgid "Shortcode copied to clipboard"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:277
+msgid "Shortcode result example"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:35
+msgid "Shortcodes"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:364
+msgid "Test your shortcodes before use them in your website"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:80
+msgid "Title"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:81
+msgid "Title + Content"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:82
+msgid "Title + Excerpt"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:322
+msgid "Try other Scribit plugins:"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:79
+msgid "Url"
+msgstr ""
+
+#: admin/partials/random-admin-display.php:300
+msgid "WRITE A PLUGIN REVIEW"
+msgstr ""

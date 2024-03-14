@@ -1,0 +1,288 @@
+.random-tab-content {
+  padding-top: 1em;
+}
+
+.random-tab-content a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.random-tab-content a:hover, .scribit_credit a:hover {
+  opacity: .7;
+}
+
+.random-tab-content .button, .random-tab-content .button {
+  vertical-align: middle!important;
+}
+
+.random-title{
+  float: left;
+  width: 100%;
+  margin-bottom: .5em;
+}
+.random-title .random-logo {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.random-title h1 {
+  display: inline-block;
+}
+
+.random-logo img {
+  max-height: 55px;
+}
+
+/*** Scribit styles ***/
+.scribit_credit a {
+  background: transparent url(../images/logo_scribit.png) 0 0 no-repeat;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  text-indent: 64px;
+  height: 32px;
+  width: 64px;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.scribit_plugin {
+	float: left;
+	margin-right: 1em;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.scribit_plugin .button {
+	float: right;
+}
+.scribit_plugin ul {
+	list-style: disc;
+	padding-left: 20px;
+}
+.scribit_plugin img {
+	float: right;
+}
+.scribit_plugin .title {
+	margin-top: .5em;
+}
+.scribit_plugins .plugin-card-top .desc ul {
+   list-style: disc;
+   padding-left: 20px;
+}
+.scribit_plugins .plugin-card-top .desc ul li {
+   margin-bottom: 0;
+}
+
+.scribit_support_description {
+   text-align: right;
+   padding-right: 1em;
+}
+
+.random span.dashicons {
+    vertical-align: sub;
+	margin-right: 5px;
+	font-size: 18px;
+}
+
+.random-tab-content .form-table td {
+  padding: 5px 10px;
+}
+
+.random-tab-content .form-table th {
+  padding: 5px 10px 5px 0;
+  width: 280px;
+}
+
+.random-tab-content .form-table td fieldset label {
+  padding-left: 5px;
+}
+
+.random_shortcode_code {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+@media screen and (min-width: 783px) {
+  .random-tab-content .form-table td fieldset label {
+    margin: 0 0 .25em !important
+  }
+}
+
+.scribit_fullwidth{
+  width: 100%;
+}
+
+.scribit_option_description{
+	font-weight: 300;
+  margin: .3em 0;
+  font-size: 12px!important;
+}
+
+.random-tab-content .disabled:focus, .random-tab-content .disabled:hover, .random-tab-content .disabled:active {
+  border-color: rgba(220,220,222,.75);
+  box-shadow: inherit;
+  cursor: default;
+}
+
+/* Give the same style as WordPress disabled elements */
+/*.scribit_input_disabled{
+  background: rgba(255,255,255,.5);
+  border-color: rgba(220,220,222,.75);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.04);
+  color: rgba(44,51,56,.5);
+}*/
+
+/*** Accordion ***/
+.shortcode_accordion_button {
+  cursor: pointer;
+  padding: .5em;
+  width: 100%;
+  border: 1px solid #AAA;
+  background: rgba(79, 175, 206, 0.2);
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.shortcode_accordion_active, .shortcode_accordion_button:hover {
+  background-color: rgb(79, 175, 206);
+}
+
+.shortcode_accordion_button *{
+  font-weight: bold;
+  color: #555;
+}
+
+.shortcode_accordion_button .shortcode_counter {
+  width: 35px;
+  display: inline-block;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.shortcode_accordion_button .shortcode_source{
+  font-size: 13px;
+}
+
+.shortcode_accordion_active, .shortcode_accordion_active *, .shortcode_accordion_button:hover, .shortcode_accordion_button:hover * {
+  color: #FFF;
+  font-weight: bold;
+}
+
+.shortcode_accordion {
+  margin: 0 0 .5em 0;
+}
+
+.shortcode_accordion_panel {
+  background-color: white;
+  overflow: hidden;
+  border: 1px solid #AAA;
+  border-top: 0;
+}
+
+.shortcode_accordion .shortcode_accordion_panel {
+  display: none;
+}
+/*** Accordion End ***/
+
+.scribit_note {
+  color: #999;
+  font-size: 90%;
+  font-style: italic;
+}
+
+.scribit-tooltip {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s;
+  outline: none;
+}
+td.scribit-tooltip:hover {
+  background: #DDD;
+}
+
+.scribit-tooltip.tooltip-help {
+  padding: 2px 6px;
+  border-radius: 2px;
+  font-style: normal;
+}
+.scribit-tooltip.tooltip-help:before {
+  content: "\f473";
+  font-family: "dashicons";
+  font-size: 13px;
+  color: white;
+  background: darkcyan;
+  padding: 6px;
+  border-radius: 15px;
+}
+.scribit-tooltip.tooltip-help:hover {
+  color: rgb(79, 175, 206);
+}
+
+.shortcode_test_result {
+  background: #f9f9ff;
+  border: 1px solid #DDD;
+  padding: .5em 1em;
+  min-height: 14px;
+}
+.shortcode_test_result .random_post{
+	display: block;
+}
+
+/*** Tooltip end ***/
+.scribit-tooltip .tooltiptext {
+  color: #fff;
+  background-color: #555;
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  opacity: 0;
+  visibility: hidden;
+  margin-bottom: 1em;
+  padding: 1em;
+  text-align: center;
+  white-space: nowrap;
+  transform: translate(-50%, 1em);
+  transition: all .15s ease-in-out;
+}
+.scribit-tooltip .tooltiptext.minwidth{
+  min-width: 300px;
+  white-space: inherit;
+}
+
+.scribit-tooltip .tooltiptext::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border: .5em solid transparent;
+  border-top-color: #555;
+  transform: translate(-50%, 0);
+}
+
+.scribit-tooltip:hover .tooltiptext {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+/*** Tooltip end ***/
+
+.random_post_link {
+	display: block;
+}
+
+.shortcode-bookmark {
+  display: block;
+  position: relative;
+  top: -50px;
+  visibility: hidden;
+}
+
+/*** Media query ***/
+@media screen and (max-width:1024px) {
+  .random-progress {
+    width: 100%;
+  }
+}
