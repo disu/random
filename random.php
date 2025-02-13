@@ -15,7 +15,7 @@
  * Plugin Name:       Random
  * Plugin URI:        https://www.scribit.it/en/wordpress-plugins/get-random-contents/
  * Description:       Random, a plugin designed to insert random contents, coming from pages, posts and other types, into your website.
- * Version:           1.2
+ * Version:           1.3
  * Author:            Scribit
  * Author URI:        https://www.scribit.it/
  * License:           GPL-2.0+

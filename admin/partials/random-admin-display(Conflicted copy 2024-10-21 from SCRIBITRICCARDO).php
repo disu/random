@@ -20,7 +20,7 @@ include_once plugin_dir_path(__FILE__) . '../../includes/random-utils.php';
 function random_admin_page_handler() {
 
   if (isset($_GET['subpage']) && ($_GET['subpage'] == 'about')) {
-      $current_page = $_GET['subpage'];
+      $current_page = esc_attr( wp_unslash( $_GET['subpage']) );
   } else {
       $current_page = 'shortcodes';
   } ?>
@@ -31,10 +31,10 @@ function random_admin_page_handler() {
 		</span>
 
 		<h2 class="nav-tab-wrapper">
-			<a href="tools.php?page=<?php echo RANDOM_PLUGIN_SLUG ?>" class="nav-tab <?php echo ($current_page == 'shortcodes') ? 'nav-tab-active' : '' ?>">
+			<a href="tools.php?page=<?php echo esc_attr(RANDOM_PLUGIN_SLUG) ?>" class="nav-tab <?php echo ($current_page == 'shortcodes') ? 'nav-tab-active' : '' ?>">
 				<span class="dashicons dashicons-shortcode" aria-hidden="true"></span><?php echo esc_html__('Shortcodes', 'random') ?>
 			</a>
-			<a style="color:#88C" href="tools.php?page=<?php echo RANDOM_PLUGIN_SLUG ?>&subpage=about" class="nav-tab <?php echo ($current_page == 'about') ? 'nav-tab-active' : '' ?>">
+			<a style="color:#88C" href="tools.php?page=<?php echo esc_attr(RANDOM_PLUGIN_SLUG) ?>&subpage=about" class="nav-tab <?php echo ($current_page == 'about') ? 'nav-tab-active' : '' ?>">
 				<span class="dashicons dashicons-info" aria-hidden="true"></span><?php echo esc_html__('About', 'random') ?>
 			</a>
 		</h2>
@@ -86,11 +86,10 @@ function random_admin_page_shortcodes_handler() {
 
    // Validating and sanitizing
    if (isset($_POST['random_shortcode_post_types'])) {
-      //$_POST['random_shortcode_post_types']['fuzzy_key'] = 'fuzzy_value';
-      $post_types = array_intersect($types, array_keys($_POST['random_shortcode_post_types']));
+    	$post_types = array_intersect($types, array_keys( wp_unslash( $_POST['random_shortcode_post_types'] ) ) );
 	}
 	else{
-	   $post_types = array();
+		$post_types = array();
 		$post_types[$default_post_type] = 'on';
 	}
 
@@ -100,8 +99,8 @@ function random_admin_page_shortcodes_handler() {
 		$posts_number = $default_post_number;
 	}
 
-	if (isset($_POST['random_shortcode_content_type']) && in_array($_POST['random_shortcode_content_type'], array_keys($content_types))) {
-    	$post_content_type = $_POST['random_shortcode_content_type'];
+	if (isset($_POST['random_shortcode_content_type']) && in_array(esc_url_raw( wp_unslash( $_POST['random_shortcode_content_type'] ) ), array_keys($content_types))) {
+    	$post_content_type = esc_url_raw( wp_unslash( $_POST['random_shortcode_content_type'] ) );
 	} else {
     	$post_content_type = $default_content_type;
 	}
@@ -110,14 +109,14 @@ function random_admin_page_shortcodes_handler() {
 
 	if (isset($_POST['random_shortcode_included_ids'])) {
 		// Does not sanitize the IDs integer list. Let the original user data into input field. The field will be sanitized in the shortcode output.
-		$random_shortcode_included_ids = $_POST['random_shortcode_included_ids'];
+		$random_shortcode_included_ids = esc_url_raw( wp_unslash( $_POST['random_shortcode_included_ids'] ) );
 	} else {
 		$random_shortcode_included_ids = $default_random_shortcode_included_ids;
 	}
 
 	if (isset($_POST['random_shortcode_excluded_ids'])) {
 		// Does not sanitize the IDs integer list. Let the original user data into input field. The field will be sanitized in the shortcode output.
-		$random_shortcode_excluded_ids = $_POST['random_shortcode_excluded_ids'];
+		$random_shortcode_excluded_ids = esc_url_raw( wp_unslash( $_POST['random_shortcode_excluded_ids'] ) );
 	} else {
 		$random_shortcode_excluded_ids = $default_random_shortcode_excluded_ids;
 	}
@@ -128,7 +127,7 @@ function random_admin_page_shortcodes_handler() {
 	</div>
 
 	<form method="POST">
-		<input type="hidden" name="page" value="<?php echo RANDOM_PLUGIN_SLUG ?>" />
+		<input type="hidden" name="page" value="<?php echo esc_attr(RANDOM_PLUGIN_SLUG) ?>" />
 		<input type="hidden" name="subpage" value="test_shortcode" />
 
 		<table class="form-table">
@@ -141,10 +140,10 @@ function random_admin_page_shortcodes_handler() {
 					<td>
 						<?php if (is_array($types))
 							foreach ($types as $type) : ?>
-								<label for="random_shortcode_post_type_<?php echo $type ?>">
-									<input name="random_shortcode_post_types[<?php echo $type ?>]" id="random_shortcode_post_type_<?php echo $type ?>" type="checkbox"
+								<label for="random_shortcode_post_type_<?php echo esc_attr($type) ?>">
+									<input name="random_shortcode_post_types[<?php echo esc_attr($type) ?>]" id="random_shortcode_post_type_<?php echo esc_attr($type) ?>" type="checkbox"
 									<?php echo (isset($post_types[$type]) ? 'checked' : '') ?>>
-									<?php echo strtoupper($type) ?>
+									<?php echo esc_attr(strtoupper($type)) ?>
 								</label><br/>
 							<?php endforeach ?>
 					</td>
@@ -168,7 +167,7 @@ function random_admin_page_shortcodes_handler() {
 					<td>
 						<select name="random_shortcode_content_type" id="random_shortcode_content_type">
                      <?php foreach ($content_types as $content_type_slug => $content_type_desc): ?>
-                           <option value="<?php echo $content_type_slug ?>" <?php echo ($post_content_type == $content_type_slug) ? 'selected="selected"' : '' ?>><?php echo $content_type_desc ?></option>
+                           <option value="<?php echo esc_attr($content_type_slug) ?>" <?php echo ($post_content_type == $content_type_slug) ? 'selected="selected"' : '' ?>><?php echo esc_attr($content_type_desc) ?></option>
                      <?php endforeach ?>
 						</select>
 					</td>
@@ -323,7 +322,7 @@ function random_admin_page_about_handler() { ?>
 		<div class="wp-list-table widefat plugin-install">
 			<div class="scribit_plugins">
 				<?php $plugin_slug = 'shortcodes-finder'; ?>
-				<div class="plugin-card plugin-card-<?php echo $plugin_slug ?>">
+				<div class="plugin-card plugin-card-<?php echo esc_attr($plugin_slug) ?>">
 					<div class="plugin-card-top">
 						<div class="name column-name">
 							<h3><a href="
@@ -332,7 +331,7 @@ function random_admin_page_about_handler() { ?>
 								<?php else : ?>
 									<?php echo esc_url( admin_url( 'plugin-install.php?tab=plugin-information&plugin='. $plugin_slug ) ) ?>
 								<?php endif ?>
-							">Shortcodes Finder<img src="https://ps.w.org/<?php echo $plugin_slug ?>/assets/icon-256x256.png" class="plugin-icon"></a></h3>
+							">Shortcodes Finder<img src="<?php echo esc_url(plugins_url('../images/shortcodes-finder_256.png', __FILE__)) ?>" class="plugin-icon"></a></h3>
 						</div>
 						<div class="action-links">
 							<ul class="plugin-action-buttons">
@@ -345,7 +344,7 @@ function random_admin_page_about_handler() { ?>
 										<?php else : ?>
 											<?php echo esc_url( admin_url( 'plugin-install.php?s='. $plugin_slug .'+scribit&tab=search&type=term' ) ) ?>
 										<?php endif ?>
-									" class="button button-primary"><?php echo esc_html__( 'Install') ?></a></li>
+									" class="button button-primary"><?php echo esc_html__('Install') ?></a></li>
 								<?php endif; ?>
 								<li><a href="
 									<?php if ( is_multisite() ) : ?>
@@ -368,7 +367,7 @@ function random_admin_page_about_handler() { ?>
 				</div>
 
 				<?php $plugin_slug = 'proofreading'; ?>
-				<div class="plugin-card plugin-card-<?php echo $plugin_slug ?>">
+				<div class="plugin-card plugin-card-<?php echo esc_attr($plugin_slug) ?>">
 					<div class="plugin-card-top">
 						<div class="name column-name">
 							<h3><a href="
@@ -377,7 +376,7 @@ function random_admin_page_about_handler() { ?>
 								<?php else : ?>
 									<?php echo esc_url( admin_url( 'plugin-install.php?tab=plugin-information&plugin='. $plugin_slug ) ) ?>
 								<?php endif ?>
-							">Proofreading<img src="https://ps.w.org/<?php echo $plugin_slug ?>/assets/icon-256x256.png" class="plugin-icon"></a></h3>
+							">Proofreading<img src="<?php echo esc_url(plugins_url('../images/proofreading_256.png', __FILE__)) ?>" class="plugin-icon"></a></h3>
 						</div>
 						<div class="action-links">
 							<ul class="plugin-action-buttons">
@@ -390,7 +389,7 @@ function random_admin_page_about_handler() { ?>
 										<?php else : ?>
 											<?php echo esc_url( admin_url( 'plugin-install.php?s='. $plugin_slug .'+scribit&tab=search&type=term' ) ) ?>
 										<?php endif ?>
-									" class="button button-primary"><?php echo esc_html__( 'Install') ?></a></li>
+									" class="button button-primary"><?php echo esc_html__('Install') ?></a></li>
 								<?php endif; ?>
 								<li><a href="
 									<?php if ( is_multisite() ) : ?>
@@ -402,7 +401,7 @@ function random_admin_page_about_handler() { ?>
 							</ul>
 						</div>
 						<div class="desc column-description">
-							<p><?php echo __('Proofreading plugin allows you to improve the quality of your posts, pages and all your WordPress website.<br/>It gives you the possibility to check the correction of the texts inserted into posts, pages and drafts in less than a second!', 'random') ?></p>
+							<p><?php echo wp_kses(__('Proofreading plugin allows you to improve the quality of your posts, pages and all your WordPress website.<br/>It gives you the possibility to check the correction of the texts inserted into posts, pages and drafts in less than a second!', 'random'), true) ?></p>
 							<p><?php echo esc_html__('18 languages supported.', 'random') ?></p>
 						</div>
 					</div>

@@ -127,7 +127,8 @@ class Random_Admin
         // See Wordpress tip: https://developer.wordpress.org/reference/functions/register_activation_hook/
         if ( is_admin() && get_option('activated_plugin') == RANDOM_PLUGIN_SLUG ) {
             delete_option('activated_plugin');
-            exit( wp_redirect( esc_url( admin_url('tools.php?page='. RANDOM_PLUGIN_SLUG) ) ) );
+            wp_redirect( esc_url( admin_url('tools.php?page='. RANDOM_PLUGIN_SLUG) ) );
+            exit();
         }
     }
 

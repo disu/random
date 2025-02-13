@@ -73,6 +73,17 @@
    margin-bottom: 0;
 }
 
+.scribit_plugins .plugin-card .desc>ul {
+   margin-left: 148px;
+   margin-top: 0;
+}
+
+@media (min-width: 1101px) {
+  .scribit_plugins .plugin-card .desc>ul {
+      margin-right: 128px;
+  }
+}
+
 .scribit_support_description {
    text-align: right;
    padding-right: 1em;

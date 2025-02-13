@@ -7,6 +7,6 @@
  * @author     Scribit <wordpress@scribit.it>
  */
 
-define('RANDOM_VERSION', '1.2');
+define('RANDOM_VERSION', '1.3');
 
 if (!defined('RANDOM_PLUGIN_SLUG')) define('RANDOM_PLUGIN_SLUG', 'random');

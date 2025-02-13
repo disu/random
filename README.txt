@@ -1,10 +1,10 @@
 === Random ===
 Contributors: scribit
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=riccardosormani@gmail.com&item_name=Random Wordpress plugin donation&no_note=0
-Tags: random posts, random pages, random content, shortcode, custom types, random post, random, casual
+Tags: random posts, random content, random post, random, casual
 Requires at least: 4.0
-Tested up to: 6.3.2
-Stable tag: 1.2
+Tested up to: 6.6.2
+Stable tag: 1.3
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -42,6 +42,12 @@ From WordPress.org
 3. Get the shortcode in one click; copy and paste it wherever you want in your webpage to show the random contents. Get also an instant demonstration of your shortcode result.
 
 == Changelog ==
+
+= 1.3 =
+* Removed deprecated warnings for PHP >= 8.2
+* Wordpress 6.6.2 compatibility
+* Imporoved escaping
+* Minor graphic changes
 
 = 1.2 =
 * Add new parameter to include only some posts from random results (by IDs)
